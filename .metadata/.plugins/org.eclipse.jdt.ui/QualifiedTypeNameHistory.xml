@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="organiko.domain.entity.Incarico"/>
+<fullyQualifiedTypeName name="organiko.domain.entity.OpPersonaFisica"/>
+<fullyQualifiedTypeName name="organiko.domain.entity.OpPersonaGiuridica"/>
+<fullyQualifiedTypeName name="organiko.domain.entity.OpPersonaFisicaTipo"/>
+<fullyQualifiedTypeName name="organiko.domain.services.IncaricoQryService"/>
+<fullyQualifiedTypeName name="organiko.hs.pl.IncaricoDTO"/>
+<fullyQualifiedTypeName name="organiko.hs.OrganikoQryService"/>
+<fullyQualifiedTypeName name="autentiko.security.hs.pl.UserDTO"/>
+<fullyQualifiedTypeName name="organiko.security.domain.entity.AuthoritySecur"/>
+<fullyQualifiedTypeName name="organiko.security.domain.entity.AuthorityTypeSecur"/>
+<fullyQualifiedTypeName name="organiko.security.domain.services.UserCmdService"/>
+<fullyQualifiedTypeName name="organiko.security.domain.entity.UserSecur"/>
+<fullyQualifiedTypeName name="org.apache.commons.logging.Log"/>
+<fullyQualifiedTypeName name="org.apache.commons.logging.LogFactory"/>
+<fullyQualifiedTypeName name="organiko.domain.opPersonaGiuridica.OpPersonaGiuridica.OpPersonaGiuridicaStatoEnum"/>
+<fullyQualifiedTypeName name="organiko.domain.personaFisica.PersonaFisicaService"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+<fullyQualifiedTypeName name="organiko.domain.personaFisicaTipo.PersonaFisicaTipoService"/>
+<fullyQualifiedTypeName name="organiko.domain.personaFisica.PersonaFisica"/>
+<fullyQualifiedTypeName name="organiko.domain.personaGiuridica.PersonaGiuridica"/>
+<fullyQualifiedTypeName name="organiko.api.hs.pl.PersonaGiuridicaDTO"/>
+</qualifiedTypeNameHistroy>

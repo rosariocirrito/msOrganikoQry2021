@@ -1,0 +1,43 @@
+1587536282852	Delete element
+1587536300721	Delete element
+1587536325921	Delete element
+1587536348993	Delete element
+1587536376938	Delete element
+1587536386199	Delete element
+1587536393230	Delete element
+1587536479713	Rename type 'OpPersonaGiuridica'
+1587536498880	Rename type 'OpPersonaGiuridicaRepository'
+1587536513221	Rename type 'OpPersonaGiuridicaService'
+1587536525450	Rename type 'OpPersonaGiuridicaServiceImpl'
+1587536585905	Rename type 'OpPersonaGiuridicaTipo'
+1587536613491	Rename type 'OpPersonaGiuridicaTipoRepository'
+1587536673423	Move compilation units
+1587536693639	Rename type 'OpPersonaGiuridicaTipoValidator'
+1587536708433	Rename type 'OpPersonaGiuridicaTipoService'
+1587536721583	Rename type 'OpPersonaGiuridicaTipoServiceImpl'
+1587536927203	Rename package 'organiko.domain.opPersonaGiuridica'
+1587537055274	Delete element
+1587537063499	Delete element
+1587537088558	Rename package 'organiko.domain.opPersonaGiuridicaTipo'
+1587537125194	Move compilation units
+1587537144450	Rename type 'OpPersonaFisicaTipo'
+1587537158763	Rename type 'OpPersonaFisicaTipoValidator'
+1587537181061	Rename type 'OpPersonaFisicaTipoRepository'
+1587537195644	Rename type 'OpPersonaFisicaTipoService'
+1587537209308	Rename type 'OpPersonaFisicaTipoServiceImpl'
+1587537238659	Rename package 'organiko.domain.opPersonaFisicaTipo'
+1587537327642	Rename type 'OpPersonaFisica'
+1587537340005	Rename type 'OpPersonaFisicaRepository'
+1587537351696	Rename type 'OpPersonaFisicaService'
+1587537363830	Rename type 'OpPersonaFisicaServiceImpl'
+1587537395049	Rename package 'organiko.domain.opPersonaFisica'
+1587537411524	Rename type 'OpPersonaAfferenza'
+1587537425073	Rename type 'OpPersonaAfferenzaRepository'
+1587537454409	Rename package 'organiko.domain.opPersonaAfferenza'
+1587545211486	Move compilation unit
+1587545237207	Move compilation unit
+1587545256228	Move compilation unit
+1587545270869	Move compilation unit
+1587545283622	Move compilation unit
+1587545431195	Move compilation units
+1587545445432	Delete element

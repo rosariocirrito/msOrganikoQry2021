@@ -1,0 +1,115 @@
+package organiko.api;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import organiko.api.hs.OrganikoQryService;
+import organiko.api.hs.pl.IncaricoDTO;
+import organiko.api.hs.pl.PersonaFisicaDTO;
+import organiko.api.hs.pl.PersonaGiuridicaDTO;
+
+
+@RestController
+@RequestMapping(value="/api")
+public class MsOrganikoQryController {
+	
+	
+	@Autowired
+    private OrganikoQryService orgServizi;
+	
+	 //
+    @RequestMapping(value="/findIncaricoById/{id}")
+    public IncaricoDTO findIncaricoById(@PathVariable(value = "id") int id) throws IOException {
+    	IncaricoDTO inc = orgServizi.findIncaricoById(id);
+    	if (inc==null) throw new FileNotFoundException("/findIncaricoById/"+id);
+    	else return inc;
+    }
+    
+    @RequestMapping(value="/findIncarichiApicaliByAssessoratoIDAndAnno/{assessoratoID}/{anno}")
+    public List<IncaricoDTO> findIncarichiApicaliByAssessoratoIDAndAnno(@PathVariable(value = "assessoratoID") int assessoratoID,
+    		@PathVariable(value = "anno") int anno) throws IOException {
+    	List<IncaricoDTO> lista = orgServizi.findIncarichiApicaliByAssessoratoIDAndAnno(assessoratoID, anno);
+    	if (lista.isEmpty()) throw new FileNotFoundException("/findIncarichiApicaliByAssessoratoIDAndAnno/"+assessoratoID+"/"+anno);
+    	else return lista;
+    }
+   
+    @RequestMapping(value="/findIncarichiApicaliByDipartimentoIDAndAnno/{dipartimentoID}/{anno}")
+    public List<IncaricoDTO> findIncarichiApicaliByDipartimentoIDAndAnno(@PathVariable(value = "dipartimentoID") int dipartimentoID,
+    		@PathVariable(value = "anno") int anno) throws IOException {
+    	List<IncaricoDTO> lista = orgServizi.findIncarichiApicaliByDipartimentoIDAndAnno(dipartimentoID, anno);
+    	if (lista.isEmpty()) throw new FileNotFoundException("/findIncarichiApicaliByDipartimentoIDAndAnno/"+dipartimentoID+"/"+anno);
+    	else return lista;
+    }
+    
+    @RequestMapping(value="/findIncarichiByDipartimentoIDAndAnno/{dipartimentoID}/{anno}")
+    public List<IncaricoDTO> findIncarichiByDipartimentoIDAndAnno(@PathVariable(value = "dipartimentoID") int dipartimentoID,
+    		@PathVariable(value = "anno") int anno) throws IOException {
+    	List<IncaricoDTO> lista = orgServizi.findIncarichiByDipartimentoIDAndAnno(dipartimentoID, anno);
+    	if (lista.isEmpty()) throw new FileNotFoundException("/findIncarichiApicaliByDipartimentoIDAndAnno/"+dipartimentoID+"/"+anno);
+    	else return lista;
+    }
+    
+    @RequestMapping(value="/findIncarichiByStrutturaIDAndAnno/{strutturaID}/{anno}")
+    public List<IncaricoDTO> findIncarichiByStrutturaIDAndAnno(@PathVariable(value = "strutturaID") int strutturaID,
+    		@PathVariable(value = "anno") int anno) throws IOException {
+    	List<IncaricoDTO> lista = orgServizi.findIncarichiByStrutturaIDAndAnno(strutturaID, anno);
+    	if (lista.isEmpty()) throw new FileNotFoundException("/findIncarichiByStrutturaIDAndAnno/"+strutturaID+"/"+anno);
+    	else return lista;
+    }
+    
+    @RequestMapping(value="/findIncarichiByDirigenteIDAndAnno/{dirigenteID}/{anno}")
+    public List<IncaricoDTO> findIncarichiByDirigenteIDAndAnno(@PathVariable(value = "dirigenteID") int dirigenteID,
+    		@PathVariable(value = "anno") int anno) throws IOException {
+    	List<IncaricoDTO> lista = orgServizi.findIncarichiByDirigenteIDAndAnno(dirigenteID, anno);
+    	if (lista.isEmpty()) throw new FileNotFoundException("/findIncarichiByStrutturaIDAndAnno/"+dirigenteID+"/"+anno);
+    	else return lista;
+    }
+    
+    // ----------------------------------------------
+    @RequestMapping(value="/findDipendentiStrictByStrutturaIDAndAnno/{idStruttura}/{anno}")
+    public List<PersonaFisicaDTO> findDipendentiStrictByStrutturaIDAndAnno(@PathVariable(value = "idStruttura") int idStruttura,
+    		@PathVariable(value = "anno") int anno) throws IOException {
+    	List<PersonaFisicaDTO> lista = orgServizi.findDipendentiStrictByStrutturaIDAndAnno(idStruttura, anno);
+    	if (lista.isEmpty()) throw new FileNotFoundException("/findIncarichiByStrutturaIDAndAnno/"+idStruttura+"/"+anno);
+    	else return lista;
+    }
+    
+    @RequestMapping(value="/findDipendentiGlobalByStrutturaIDAndAnno/{idStruttura}/{anno}")
+    public List<PersonaFisicaDTO> findDipendentiGlobalByStrutturaIDAndAnno(@PathVariable(value = "idStruttura") int idStruttura,
+    		@PathVariable(value = "anno") int anno) throws IOException {
+    	List<PersonaFisicaDTO> lista = orgServizi.findDipendentiGlobalByStrutturaIDAndAnno(idStruttura, anno);
+    	if (lista.isEmpty()) throw new FileNotFoundException("/findDipendentiGlobalByStrutturaIDAndAnno/"+idStruttura+"/"+anno);
+    	else return lista;
+    }
+    
+    @RequestMapping(value="/findDipendentiByDipartimentoIDAndAnno/{idDipartimento}/{anno}")
+    public List<PersonaFisicaDTO> findDipendentiByDipartimentoIDAndAnno(@PathVariable(value = "idDipartimento") int idDipartimento,
+    		@PathVariable(value = "anno") int anno) throws IOException {
+    	List<PersonaFisicaDTO> lista = orgServizi.findDipendentiByDipartimentoIDAndAnno(idDipartimento, anno);
+    	if (lista.isEmpty()) throw new FileNotFoundException("/findDipendentiGlobalByDipartimentoIDAndAnno/"+idDipartimento+"/"+anno);
+    	else return lista;
+    }
+    
+    @RequestMapping(value="/findDipendentiByDipartimentoID/{idDipartimento}")
+    public List<PersonaFisicaDTO> findDipendentiByDipartimentoID(@PathVariable(value = "idDipartimento") int idDipartimento) throws IOException {
+    	List<PersonaFisicaDTO> lista = orgServizi.findDipendentiByDipartimentoID(idDipartimento);
+    	if (lista.isEmpty()) throw new FileNotFoundException("/findDipendentiGlobalByDipartimentoIDAndAnno/"+idDipartimento);
+    	else return lista;
+    }
+    
+    @RequestMapping(value="/findPersonaFisicaById/{id}")
+    public PersonaFisicaDTO findPersonaFisicaById(@PathVariable(value = "id") int id) throws IOException {
+    	PersonaFisicaDTO pf = orgServizi.findPersonaFisicaById(id);
+    	if (pf==null) throw new FileNotFoundException("/findPersonaFisicaById/"+id);
+    	else return pf;
+    }
+    
+ // ----------------------------------------------
+    
+}
